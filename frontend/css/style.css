@@ -1,0 +1,35 @@
+body{
+    background-color: #212f3d;
+    color:aliceblue;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+.column {
+    padding: 20px; /* Espacio interno */
+    max-width: 1000px; /* Ancho máximo de la columna */
+    margin: 0 auto; /* Centrar la columna horizontalmente */
+}
+.column1{
+    flex: 1;
+    padding: 20px;
+}
+.column2 {
+    flex: 2;
+    padding: 20px;
+}
+
+.border-rounded {
+    border-radius: 20px;
+    border: 2px solid aliceblue;
+}
+
+.text-left {
+    text-align: left;
+}
+.black-text {
+    color: black;
+}
