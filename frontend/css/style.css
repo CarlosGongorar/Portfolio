@@ -1,35 +1,86 @@
-body{
-    background-color: #212f3d;
-    color:aliceblue;
-    text-align: center;
+/* General */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    font-size: 20px;
 }
 
+/* Background */
+.background {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #d2d2d2,#7462ff, #f48e21, #23d5ab);
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+
+@keyframes color {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+/* Box Structure */
 .container {
     display: flex;
-    gap: 20px;
-}
-.column {
-    padding: 20px; /* Espacio interno */
-    max-width: 1000px; /* Ancho máximo de la columna */
-    margin: 0 auto; /* Centrar la columna horizontalmente */
-}
-.column1{
-    flex: 1;
-    padding: 20px;
-}
-.column2 {
-    flex: 2;
-    padding: 20px;
-}
-
-.border-rounded {
+    justify-content: center;
+    align-self: center;
+    width: 50%;
+    height: 550px;
+    background: white;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    border: 2px solid aliceblue;
 }
 
-.text-left {
-    text-align: left;
+.buttons-col {
+    flex: 1;
+    padding: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px 0 0 20px;
 }
-.black-text {
-    color: black;
+.content-col{
+    flex: 4;
+
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* Button Styles */
+
+.button-page-top{
+    padding: 1px;
+    width: 100%;
+    height: 50px;
+    border-radius: 20px 0 0 0 ;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+.button-page{
+    padding: 1px;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+
+.button-page-top:hover {
+    background-color: #d0d3d4  ;
+}
+.button-page:hover {
+    background-color: #d0d3d4  ;
 }
